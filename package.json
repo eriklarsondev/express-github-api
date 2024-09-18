@@ -1,0 +1,12 @@
+{
+  "name": "express-github-api",
+  "version": "0.1.0",
+  "author": "Erik Larson",
+  "description": "Express server that fetches project data for specific profiles using the GitHub API",
+  "keywords": [],
+  "license": "MIT",
+  "main": "dist-server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
