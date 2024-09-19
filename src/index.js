@@ -3,6 +3,8 @@ import path from 'path'
 import colors from 'colors'
 import 'dotenv/config'
 
+import { api } from './api/module'
+
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -16,6 +18,8 @@ app.use('/www', express.static(path.join(__dirname, '..', 'public')))
 app.get('*', (req, res) => {
   res.status(200).render('index')
 })
+
+app.use(api)
 
 app.listen(port, () => {
   console.log(`\napp is running on port ${colors.bold(port)}\n`.cyan)
