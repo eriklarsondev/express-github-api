@@ -15,11 +15,11 @@ app.set('view engine', 'ejs')
 
 app.use('/www', express.static(path.join(__dirname, '..', 'public')))
 
+app.use(api)
+
 app.get('*', (req, res) => {
   res.status(200).render('index')
 })
-
-app.use(api)
 
 app.listen(port, () => {
   console.log(`\napp is running on port ${colors.bold(port)}\n`.cyan)

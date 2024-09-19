@@ -7,4 +7,6 @@ const router = express.Router()
 
 const controller = new APIController()
 
+router.get('/:username', controller.fetchRepos)
+
 api.use(router)
